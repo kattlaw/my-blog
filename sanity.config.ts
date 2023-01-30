@@ -8,6 +8,7 @@ import Logo from './components/Logo';
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
+const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION!;
 
 export default defineConfig({
   basePath: "/studio",
@@ -15,6 +16,7 @@ export default defineConfig({
   title: 'Katherine L. Blog',
   projectId:'95uf96hz',
   dataset: 'production',
+  apiVersion: '2021-10-21',
   plugins: [deskTool(), visionTool()],
   schema: {
     types: schemaTypes,
