@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@100;200;400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Caveat', cursive;
+}
+
+h2, p {
+    font-family: 'Montserrat', sans-serif;
+}
