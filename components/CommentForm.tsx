@@ -23,7 +23,7 @@ const CommentForm = ({post}: Props) => {
   
         fetch('/api/createComment', {
             method: 'POST',
-            body: JSON.stringify({data})
+            body: JSON.stringify(data)
         }).then(()=> {
             console.log(data);
             setSubmitted(true)
