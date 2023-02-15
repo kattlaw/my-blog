@@ -1,6 +1,6 @@
 import {Comment} from '../typings';
 
-
+{/*}
 const CommentSection = (props: { comments: Comment[]}) => {
     const { comments } = props;
     return (
@@ -27,4 +27,4 @@ const CommentSection = (props: { comments: Comment[]}) => {
     )
 }
 
-export default CommentSection;
+export default CommentSection;*/}

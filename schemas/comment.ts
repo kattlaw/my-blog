@@ -32,20 +32,6 @@ export default defineType({
         to: [{type: 'post'}]
         }), 
     ],
-  },
-    {/*preview: {
-      select: {
-        _id: '_id',
-        title: 'comment',
-        name: 'name',
-        type: 'text',
-        comment: 'comment',
-        _createdAt: '_createdAt',
-      },
-      prepare(selection) {
-        const {comment} = selection 
-        return {...selection, subtitle: comment}
-      }*
-    }*/
-})
+  }, 
+)
 

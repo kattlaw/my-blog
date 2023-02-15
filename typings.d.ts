@@ -69,7 +69,7 @@ interface Title {
     current: string;
 }
 
-export interface Comment {
+export interface Comment extends Base {
     approved: boolean;
     comment: string;
     email: string;
@@ -78,19 +78,14 @@ export interface Comment {
       _ref: string;
       _type: string;
     };
-    _id: string;
-    _createdAt: string;
-    _rev: string;
-    _type: string;
-    _updatedAt: string;
     }
 
-export interface CommentFormData {
+{/*export interface CommentFormData {
     _id: string;
     name: string;
     email: string;
     comment: string[];
-  }
+  }*/}
 
 
 

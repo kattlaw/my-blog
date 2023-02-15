@@ -20,7 +20,7 @@ export const revalidate = 60;
 export async function generateStaticParams() {
     const query = groq`*[_type=='post']
     { 
-        slug
+        slug,
     }
     `;
 
@@ -39,6 +39,7 @@ async function Post({ params: { slug } }: Props) {
             ...,
             author->,
             categories[]->,
+
             'comments': *[
             _type == 'comment' &&
             post._ref == ^._id &&
@@ -91,35 +92,46 @@ async function Post({ params: { slug } }: Props) {
             </div>
         </article>
    
-        <div className="relative min-w-[400px] mx-auto">
-            <div className="flex flex-col mx-auto my-10 p-10 max-w-2xl mb-4 text-[#3b3b58] shadow">
-            <h2 className="mt-2 mb-4 text-2xl lg:text-3xl leading-tight">Comments</h2>
+        <div className="relative min-w-[300px] px-10 mx-auto">
+            <div className="flex flex-col mx-auto my-10 p-10 max-w-2xl mb-4 text-[#3b3b58] shadow border rounded">
+            <h2 className="mt-1 mb-1 text-3xl lg:text-3xl leading-tight font-bold">Comments</h2>
+            <hr className="py-3 mt-2" />
         <ul>
-        {post.comments && post.comments.map(Comment => {
-            return <div key={Comment._id} className="mb-5">
-                <hr className="mb-5" />
+        {!post.comments.length && (
+            <p className="text-sm text-gray-500 italic"> No comments yet...</p> )}
+         {post.comments.map(Comment => {
+            return <p key={Comment._id} className="mb-1">
+             
                 <p>
-                    <span className='text-[#3b3b58]'>
-                        <a href={`mailto:${Comment.email}`}>{Comment.name} </a> 
-                        <span className="text-sm italic">{new Date(Comment._createdAt).toLocaleDateString("en-US", {
+                    <span className="text-[#3b3b58] underline underline-offset-4 decoration-gray-300 bg-[#fbf7ef]">
+          
+                        <a href={`mailto:${Comment.email}`}>{Comment.name} </a>
+                     
+                        <span className="text-[11px] italic pb-4">said on {new Date(Comment._createdAt).toLocaleDateString("en-US", {
                                         day: "numeric",
                                         month: "numeric",
-                                        year: "numeric",
+                                        year: "2-digit",
+                                        hour: "numeric",
+                                        minute: "2-digit"
                                     })}
+                                     :
                         </span>
-                        </span> : {Comment.comment}
+                        </span>
+                        {''}
+                        <br>
+                        </br>
+                        <p className="text-[14px] font-['Frank_Ruhl_Libre'] font-light py-4 indent-2">{Comment.comment}</p>
                 </p>
-            </div>
+                <hr className="py-3 mt-2" />
+            </p>
         })}     
       </ul>
             </div>
             <div className="flex-col mx-auto my-10 p-10 max-w-2xl mb-4 text-[#3b3b58] shadow-gray-500">
             <CommentForm post={post}/>
-          
             </div>
         </div>
-    </div>
-         
+    </div>    
     )
 }
 

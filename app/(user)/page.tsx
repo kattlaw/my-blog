@@ -11,6 +11,7 @@ const query = groq`
     ...,
     author->,
     categories[]->,
+    comments[]->,
     }
      | order(_createdAt desc)
 `

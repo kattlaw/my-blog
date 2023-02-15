@@ -13,16 +13,18 @@ function BlogList({ posts }: Props) {
     return (
         <div>
             <hr className="border-[#b2b2b2] mb-10 mx-10" />
-            <div className="grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-24 xl:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 pb-24 lg:gap-x-0 xl:grid-cols-3 justify-items-center">
                 {posts.map(post => (
                     <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
                     <div className="flex flex-col group cursor-pointer">
-                        <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out justify-between">
+                        <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out justify-evenly">
                             <Image
                                 className="object-cover object-left lg:object-center"
                                 src={urlFor(post.mainImage).url()}
                                 alt={post.author.name}
                                 fill
+                                sizes="max-w-[500px] max-h-[400px]"
+                                priority={true}
                             />
                             <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
                                 <div>
@@ -44,7 +46,7 @@ function BlogList({ posts }: Props) {
                                     </div> 
                             </div>
                         </div>
-                        <div className="mt-3 flex-initial w-full">
+                        <div className="mt-3 flex-initial w-96 md:w-[23rem] lg:w-96">
                             <p className="line-clamp-2 text-gray-400 text-base font-normal">{post.description}</p>
                         </div>
                         <p className="mt-3 font-bold flex items-center group-hover:underline text-[#3b3b58]">
