@@ -1,4 +1,4 @@
-import {defineConfig, StudioLogo} from 'sanity';
+import {defineConfig} from 'sanity';
 import {deskTool} from 'sanity/desk';
 import {visionTool} from '@sanity/vision';
 import {schemaTypes} from './schemas';
@@ -7,17 +7,17 @@ import StudioNavbar from './components/StudioNavbar';
 import Logo from './components/Logo';
 import { getDefaultDocumentNode } from './structure';
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
-const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION!;
+const token = process.env.SANITY_API_TOKEN;
 
 export default defineConfig({
   basePath: "/studio",
   name: 'default',
   title: 'Katherine L. Blog',
-  projectId:'95uf96hz',
+  projectId:  '95uf96hz',
   dataset: 'production',
   apiVersion: '2021-10-21',
+  token: token,
+  useCdn: false,
   plugins: [deskTool({
     defaultDocumentNode: getDefaultDocumentNode,
   }), visionTool()],

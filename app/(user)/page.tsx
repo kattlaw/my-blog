@@ -10,11 +10,12 @@ const query = groq`
     *[_type=='post'] {
     ...,
     author->,
-    categories[]->
-    } | order(_createdAt desc)
+    categories[]->,
+    }
+     | order(_createdAt desc)
 `
 
-export const revalidate = 30;
+export const revalidate = 60;
 
 export default async function HomePage() {
 
@@ -33,5 +34,6 @@ export default async function HomePage() {
 
     const posts = await client.fetch(query);
     return <BlogList posts={posts} />;
-    
 }
+    
+    

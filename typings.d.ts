@@ -14,6 +14,7 @@ interface Post extends Base {
     slug: Slug;
     title: string;
     description: string;
+    comments: Comment[];
 }
 
 interface Author extends Base {
@@ -67,3 +68,29 @@ interface Title {
     _type: "string";
     current: string;
 }
+
+export interface Comment {
+    approved: boolean;
+    comment: string;
+    email: string;
+    name: string;
+    post: {
+      _ref: string;
+      _type: string;
+    };
+    _id: string;
+    _createdAt: string;
+    _rev: string;
+    _type: string;
+    _updatedAt: string;
+    }
+
+export interface CommentFormData {
+    _id: string;
+    name: string;
+    email: string;
+    comment: string[];
+  }
+
+
+

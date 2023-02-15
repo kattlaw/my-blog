@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import myLogo from '../public/assets/images/logo7.png';
+import myLogo from '../public/logo7.png';
 
 function Logo(props: any) {
     const { renderDefault, title } = props;

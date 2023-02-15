@@ -1,5 +1,6 @@
 import Header from '../../components/Header';
 import Banner from '../../components/Banner';
+import Footer from '../../components/Footer';
 import '../../styles/globals.css';
 
 export default function RootLayout({
@@ -9,10 +10,11 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className="max-w-7xl mx-auto">
+      <body className="mx-0">
         <Header />
         <Banner />
         {children}
+        <Footer />
       </body>
     </html>
   )

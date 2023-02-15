@@ -1,13 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@100;200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant:wght@300;400;600&family=Covered+By+Your+Grace&family=Lato:wght@300;400&family=Montserrat:wght@100;200;400;600&family=Open+Sans:wght@300;400;500&family=Reenie+Beanie&family=Shadows+Into+Light&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-    font-family: 'Caveat', cursive;
+    background-color: #fff;
+    font-family: 'Lato';
+    display: flex;
+    flex-direction: column;
 }
 
-h2, p {
+html, body {
+    height: 100%;
+}
+
+p {
     font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #fbf7ef;
+    min-height: 10vh;
+}
+
+a {
+    font-family: 'Open Sans';
+    font-weight: bolder;
+    color: #3b3b58;
+}
+
+footer {
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: auto;
+    background-color: #fbf7ef;
+}
+
+footer {
+    flex-shrink: 0;    
 }
