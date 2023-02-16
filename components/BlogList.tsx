@@ -13,11 +13,11 @@ function BlogList({ posts }: Props) {
     return (
         <div>
             <hr className="border-[#b2b2b2] mb-10 mx-10" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 pb-24 lg:gap-x-0 xl:grid-cols-3 justify-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 pb-24 lg:gap-x-0 lg:mx-12 lg:px-10 xl:grid-cols-3 xl:px-2 justify-items-center">
                 {posts.map(post => (
                     <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
                     <div className="flex flex-col group cursor-pointer">
-                        <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out justify-evenly">
+                        <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
                             <Image
                                 className="object-cover object-left lg:object-center"
                                 src={urlFor(post.mainImage).url()}
@@ -29,7 +29,7 @@ function BlogList({ posts }: Props) {
                             <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
                                 <div>
                                     <p className="font-bold">{post.title}</p>
-                                    <p>
+                                    <p className="text-sm">
                                         {new Date(post._createdAt).toLocaleDateString('en-US', {
                                             day: "numeric",
                                             month: "long",
