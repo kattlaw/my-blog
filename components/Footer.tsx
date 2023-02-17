@@ -29,8 +29,8 @@ function Footer() {
                 </ul>
             </div>
                 <hr className="my-6 border-[#b2b2b2]" />
-                <span className="block text-sm text-[#76768a] text-center -mb-2">© 2023
-                <Link href="https://klawdev.com" className="text-[#3b3b58] hover:underline hover:text-[#76768a]"> Katherine Law</Link>. All Rights Reserved.
+                <span className="block text-sm text-[#76768a] text-center -mb-2 font-['Frank_Ruhl_Libre']">© 2023
+                <Link href="https://klawdev.com" className="text-[#3b3b58] hover:underline hover:text-[#76768a] font-['Frank_Ruhl_Libre']"> Katherine Law</Link>. All Rights Reserved.
                 </span>
       </footer>
        

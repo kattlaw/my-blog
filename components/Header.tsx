@@ -21,14 +21,14 @@ function Header() {
                 </Link>
                 <Link
                     className="px-1 text-[12px] hover:underline"
-                    href="/about">
+                    href= "/about">
                     About
                 </Link>
-                <Link
+                {/*<Link
                     className="px-1 text-[12px] hover:underline"
                     href="#footer">
                     Contact
-                </Link>
+                </Link>*/}
             </div>
         </header>
     )
