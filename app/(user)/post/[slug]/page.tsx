@@ -89,7 +89,7 @@ const post: Post = await client.fetch(query, { slug });
                 <div className="mt-14 text-base md:mx-10">
                 <PortableText value={post.body} components={RichTextComponents} />
                 </div>
-                <div className="flex mx-10 hover:underline">
+                <div className="flex py-auto mx-auto md:mx-10 hover:underline">
                     <button className="text-[#73736f] text-[12px]">
                         <Link href="/">
                         <HiOutlineArrowLeft className="inline-flex mr-2" />
@@ -101,7 +101,7 @@ const post: Post = await client.fetch(query, { slug });
    
             <div className="relative min-w-[300px] px-3 md:px-10 mx-auto">
             <div className="flex flex-col mx-auto my-10 p-10 max-w-2xl mb-4 text-[#73736f] shadow border rounded">
-                <h2 className="mt-1 mb-1 text-3xl lg:text-3xl leading-tight font-bold">Comments</h2>
+                <h2 className="mt-1 mb-1 md:text-3xl lg:text-3xl leading-tight font-bold">Comments</h2>
             <hr className="py-3 mt-2" />
             <ul>
                 {!post.comments.length && (

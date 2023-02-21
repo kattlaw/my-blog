@@ -44,7 +44,7 @@ const CommentForm = ({post}: Props) => {
     ): (
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col max-w-2xl mx-auto mb-10 p-5">
              <h3 className="text-sm text-gray-500">Enjoyed this post?</h3>
-             <h4 className="text-3xl font-bold text-[#73736f]">Leave a comment below!</h4>
+             <h4 className="text-xl md:text-3xl font-bold text-[#73736f]">Leave a comment below!</h4>
              <hr className="py-3 mt-2" />
 
              <input {...register("_id")} type="hidden" name="_id" value={post._id} />

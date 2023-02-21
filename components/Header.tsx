@@ -6,8 +6,8 @@ import { HiOutlineMail } from 'react-icons/hi';
 
 function Header() {
     return (
-        <header className="w-full py-1 px-4 md:px-10 flex justify-start items-center justify-between">
-            <div className="">
+        <header className="w-full py-1 px-4 md:px-10 flex flex-nowrap items-center justify-between">
+            <div>
                 <Link 
                     href="/"
                 >
