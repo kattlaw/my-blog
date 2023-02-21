@@ -17,7 +17,7 @@
 ## Built With
 
    - The project was built with Next.js 13, Typescript, and Sanity.io
-   - Sanity Studio allows for real-time content production and publishing
+   - Sanity for content publishing
    - GROQ query language used to access specific document information and data responses for Sanity Client to fetch on the        frontend
    - Tailwind for styling
    
