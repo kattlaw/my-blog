@@ -11,18 +11,24 @@
 ## Overview
 
    - This blog project uses Sanity to produce a headless jamstack site
-   - Sanity Studio allows for writing, editing, and updating content in real-time
-   - The frontend is supported by Nextjs, Typescript, and Tailwind
+   - The frontend is supported by Nextjs, Typescript, and Tailwind CSS
+   
+   <img width="600" alt="Blog" src="https://user-images.githubusercontent.com/97987865/220432236-c70ddd1e-43d9-46e2-af1f-ca8ee0315573.png">
+
    
 ## Built With
 
-   - The project was built with Next.js 13, Typescript, and Sanity.io
-   - Sanity for content publishing
-   - GROQ query language used to access specific document information and data responses for Sanity Client to fetch on the        frontend
-   - Tailwind for styling
+   * Next.js v13
+   * React
+   * Typescript
+   * Sanity.io
+   * Tailwind CSS
+   * GROQ query language
+   * React-Hook-Form
    
 ## Features
 
-   - Sanity Studio for admin to write, edit, update, and publish all posts instantly
+   - Sanity Studio for headless CMS to write, edit, update, and publish all content in the backend
+   - Sanity preview in studio to see changes in real-time
    - Comment engine so users have ability to post comments on specific blog posts
-   - Comments shown in a preview on Sanity Studio and must be approved before posting to frontend
+   - Comments submitted are previewed in Sanity Studio for approval by admin before posted
