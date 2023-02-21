@@ -1,27 +1,28 @@
 # Blog built with Next.js and Sanity Studio
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+[Blog](https://katlawblog.vercel.app)
 
-## Deploy your own
+## Table of Contents
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Features](#features)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Overview
 
-## How to use
+   - This blog project uses Sanity to produce a headless jamstack site
+   - Sanity Studio allows for writing, editing, and updating content in real-time
+   - The frontend is supported by Nextjs, Typescript, and Tailwind
+   
+## Built-with
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+   - The project was built with Next.js 13, Typescript, and Sanity.io
+   - Sanity Studio allows for real-time content production and publishing
+   - GROQ query language used to access specific document information and data responses for Sanity Client to fetch on the        frontend
+   - Tailwind for styling
+   
+## Features
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+   - Sanity Studio for admin to write, edit, update, and publish all posts instantly
+   - Comment engine so users have ability to post comments on specific blog posts
+   - Comments shown in a preview on Sanity Studio and must be approved before posting to frontend
