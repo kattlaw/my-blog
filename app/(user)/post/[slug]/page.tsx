@@ -86,7 +86,7 @@ const post: Post = await client.fetch(query, { slug });
                 </div>
           
             <article className="px-10 pb-28">        
-                <div className="mt-14 text-base mx-10">
+                <div className="mt-14 text-base md:mx-10">
                 <PortableText value={post.body} components={RichTextComponents} />
                 </div>
                 <div className="flex mx-10 hover:underline">
@@ -99,7 +99,7 @@ const post: Post = await client.fetch(query, { slug });
                 </div>
             </article>
    
-            <div className="relative min-w-[300px] px-10 mx-auto">
+            <div className="relative min-w-[300px] px-3 md:px-10 mx-auto">
             <div className="flex flex-col mx-auto my-10 p-10 max-w-2xl mb-4 text-[#73736f] shadow border rounded">
                 <h2 className="mt-1 mb-1 text-3xl lg:text-3xl leading-tight font-bold">Comments</h2>
             <hr className="py-3 mt-2" />

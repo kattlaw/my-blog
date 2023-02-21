@@ -11,7 +11,7 @@ function Header() {
                 <Link 
                     href="/"
                 >
-                    <span className="text-2xl md:text-4xl text-[#957964] font-['Shadows_Into_Light'] font-bold flex-grow tracking-wide">
+                    <span className="text-2xl md:text-4xl text-[#957964] font-['Shadows_Into_Light'] font-bold tracking-wide">
                         Bereaving Out Loud 
                     </span>
                     <br></br>
@@ -20,7 +20,7 @@ function Header() {
                     </span>
                 </Link>  
             </div>
-            <div className="flex flex-wrap pb-0 md:gap-2 items-center tracking-wider text-[12px]">
+            <div className="flex flex-nowrap pb-0 md:gap-2 items-center tracking-wider text-[12px]">
                 <Link
                     href="/"
                     className="px-1 hover:underline"    
