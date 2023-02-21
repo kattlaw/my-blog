@@ -14,7 +14,7 @@
    - Sanity Studio allows for writing, editing, and updating content in real-time
    - The frontend is supported by Nextjs, Typescript, and Tailwind
    
-## Built-with
+## Built With
 
    - The project was built with Next.js 13, Typescript, and Sanity.io
    - Sanity Studio allows for real-time content production and publishing
