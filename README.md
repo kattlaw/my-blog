@@ -1,6 +1,6 @@
 # Blog built with Next.js and Sanity Studio
 
-[Blog](https://katlawblog.vercel.app)
+[Bereaving Out Loud](https://katlawblog.vercel.app)
 
 ## Table of Contents
 
@@ -10,8 +10,8 @@
 
 ## Overview
 
-   - This blog project uses Sanity to produce a headless jamstack site
-   - The frontend is supported by Nextjs, Typescript, and Tailwind CSS
+   - A personal blog built using Sanity.io to produce a headless jamstack site
+   - The frontend is built and supported by Nextjs, Typescript, and Tailwind CSS
    
    <img width="600" alt="Blog" src="https://user-images.githubusercontent.com/97987865/220432236-c70ddd1e-43d9-46e2-af1f-ca8ee0315573.png">
 
