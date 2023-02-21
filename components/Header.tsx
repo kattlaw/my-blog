@@ -1,34 +1,58 @@
 import Link from 'next/link';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { HiOutlineMail } from 'react-icons/hi';
+
+
 
 function Header() {
     return (
-        <header className="w-full py-5 px-10 flex justify-start items-center justify-between">
-            <div>
-                <Link href="/">
+        <header className="w-full py-1 px-10 flex justify-start items-center justify-between">
+            <div className="">
+                <Link 
+                    href="/"
+                >
                     <span className="text-2xl md:text-4xl text-[#957964] font-['Shadows_Into_Light'] font-bold flex-grow tracking-wide">
-                    Bereaving Out Loud </span>
+                        Bereaving Out Loud 
+                    </span>
                     <br></br>
-                    <span className="text-sm md:text-base text-[#76768a] font-['Reenie_Beanie'] font-bold ml-[1em] md:ml-[5em]">
-                    Confessions of a grieving daughter...
+                    <span className="text-sm md:text-base text-[#73736f] font-['Reenie_Beanie'] font-bold ml-[1em] md:ml-[5em]">
+                        Confessions of a grieving daughter...
                     </span>
                 </Link>  
             </div>
-            <div className="flex pb-0 md:gap-5">
+            <div className="flex flex-wrap pb-0 md:gap-2 items-center tracking-wider text-[12px]">
                 <Link
-                    className="px-1 text-[12px] hover:underline"
-                    href="/">
-                    Home
+                    href="/"
+                    className="px-1 hover:underline"    
+                >
+                    HOME
                 </Link>
                 <Link
-                    className="px-1 text-[12px] hover:underline"
-                    href= "/about">
-                    About
+                    href="/about"
+                    className="md:mr-8 lg:mr-16 px-1 hover:underline"
+                >
+                    ABOUT
                 </Link>
-                {/*<Link
-                    className="px-1 text-[12px] hover:underline"
-                    href="#footer">
-                    Contact
-                </Link>*/}
+                <div className="hidden md:flex flex-wrap pb-0 md:gap-2 items-center">
+                <Link 
+                    href="https://linkedin.com/in/katlawdev" 
+                    className="pl-3 ml-3 mr-2 hover:text-[#957964] text-[13px]"
+                >
+                    <BsLinkedin />
+                </Link>
+                <Link 
+                    href="https://github.com/kattlaw" 
+                    className="mr-2 hover:text-[#957964] text-[13px]"
+                >
+                    <BsGithub />
+                </Link>
+                <a 
+                    href="mailto:klaw@klawdev.com" 
+                    className="hover:text-[#957964] text-[14px]"
+                >
+                    <HiOutlineMail />
+                </a>
+                </div>
             </div>
         </header>
     )

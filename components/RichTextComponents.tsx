@@ -19,7 +19,7 @@ export const RichTextComponents = {
     },
     list: {
         bullet: ({ children }: any) => (
-            <ul className="ml-10 py-5 list-disc space-y-5 font-bold font-['Montserrat']">{children}</ul>
+            <ul className="ml-10 py-5 list-disc space-y-5 font-bold font-['Montserrat'] text-[#73736f]">{children}</ul>
         ),
         number: ({ children }: any) => (
             <ol className="mt-lg list-decimal">{children}</ol>
@@ -27,7 +27,7 @@ export const RichTextComponents = {
     },
     block: {
         h1: ({ children }: any) => (
-            <h1 className="text-5xl py-10 font-bold">{children}</h1>
+            <h1 className="text-5xl py-10 font-['Noto_Serif_Display']">{children}</h1>
         ),
         h2: ({ children }: any) => (
             <h2 className="text-4xl py-10 font-bold">{children}</h2>

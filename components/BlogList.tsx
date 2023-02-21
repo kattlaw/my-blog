@@ -13,47 +13,47 @@ function BlogList({ posts }: Props) {
     return (
         <div>
             <hr className="border-[#b2b2b2] mb-10 mx-10" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 pb-24 lg:gap-x-0 lg:mx-12 lg:px-10 xl:grid-cols-3 xl:px-2 justify-items-center">
+            <div className="flex flex-col-1 justify-center flex-wrap pb-24 gap-y-5 md:flex-col-2 md:space-x-4 md:justify-space-between md:px-5 lg:flex-col-3">
                 {posts.map(post => (
                     <ClientSideRoute key={post._id} route={`/post/${post.slug.current}`}>
-                    <div className="flex flex-col group cursor-pointer">
-                        <div className="relative w-full h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
+                    <div className="flex-col group cursor-pointer">
+                        <div className="relative w-[390px] h-[263px] md:w-[375px] lg:w-[390px]">
                             <Image
-                                className="object-cover object-left lg:object-center"
+                                className="object-cover object-center"
                                 src={urlFor(post.mainImage).url()}
                                 alt={post.author.name}
                                 fill
-                                sizes="max-w-[500px] max-h-[400px]"
                                 priority={true}
                             />
-                            <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-5 flex justify-between">
+                            </div>
+                            <div className="flex flex-row justify-center -mt-8">
+                            <div className="w-[325px] bg-[#fbf7ef] drop-shadow-sm outline p-5 outline-white -outline-offset-[10px]">
                                 <div>
-                                    <p className="font-bold">{post.title}</p>
-                                    <p className="text-sm">
+                                    <p className="font-['Noto_Serif_Display'] text-[20px] font-light text-[#73736f] tracking-wide">{post.title}</p>
+                                    <p className="text-[10px] font-['Lato'] text-[#73736f] font-light tracking-wider">
                                         {new Date(post._createdAt).toLocaleDateString('en-US', {
                                             day: "numeric",
-                                            month: "long",
-                                            year: "numeric",
-                                        })}
+                                            month: "numeric",
+                                            year: "numeric"
+                                        }).split('/').join('.')}
                                     </p>
+                                    <p className="line-clamp-2 text-[#73736f] text-[15px] font-['Lato'] mt-8 tracking-wide">{post.description}</p>
                                 </div>
-                               <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
+                               {/*<div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
                                     {post.categories.map((category) => (
-                                    <div className="bg-[#fff] text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
-                                    <p>{category.title}</p>
-                                        </div>
+                                    <div className="text-center px-3 py-1 text-sm">
+                                        <p className="font-['Lato']">{category.title}</p>
+                                    </div>
                                     ))}
-                                    </div> 
+                                    </div> */}
+                                    <p className="mt-9 font-bolder text-[11px] text-sm flex items-center group-hover:underline text-[#73736f] font-['Lato']">
+                                        READ MORE 
+                                        <HiOutlineArrowNarrowRight className="ml-2 h-4 w-4" />
+                                    </p>
                             </div>
                         </div>
                         <div className="mt-3 flex-initial w-96 md:w-[23rem] lg:w-96">
-                            <p className="line-clamp-2 text-gray-400 text-base font-normal">{post.description}</p>
-                        </div>
-                        <p className="mt-3 font-bold flex items-center group-hover:underline text-[#3b3b58]">
-                            Read More 
-                            <HiOutlineArrowNarrowRight className="ml-2 h-4 w-4" />
-                        </p>
-
+                        </div> 
                     </div>
                     </ClientSideRoute>
                 ))}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant:wght@300;400;600&family=Covered+By+Your+Grace&family=Frank+Ruhl+Libre:wght@300;400;600;700&family=Lato:wght@300;400&family=Montserrat:wght@100;200;400;600&family=Open+Sans:wght@300;400;500&family=Reenie+Beanie&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&family=Caveat&family=Cormorant+Infant:wght@300;400&family=Cormorant:wght@300;400;600&family=Frank+Ruhl+Libre:wght@300;400;600;700&family=Lato:wght@300;400&family=Montserrat:wght@100;200;400;600&family=Nothing+You+Could+Do&family=Noto+Serif+Display:wght@300;400&family=Open+Sans:wght@300;400;500&family=Reenie+Beanie&family=Shadows+Into+Light&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -19,6 +19,7 @@ html, body {
 
 p {
     font-family: 'Montserrat', sans-serif;
+    color: #73736f;
 }
 
 header {
@@ -27,9 +28,9 @@ header {
 }
 
 a {
-    font-family: 'Open Sans';
+    font-family: 'Lato';
     font-weight: bolder;
-    color: #3b3b58;
+    color: #73736f;
 }
 
 footer {
@@ -40,8 +41,5 @@ footer {
     padding-bottom: 0;
     margin-top: auto;
     background-color: #fbf7ef;
-}
-
-footer {
     flex-shrink: 0;    
 }
