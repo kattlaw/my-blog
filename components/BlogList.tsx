@@ -3,9 +3,11 @@ import urlFor from '../lib/urlFor';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import ClientSideRoute from './ClientSideRoute';
 import Post from '../app/(user)/post/[slug]/page';
+import SubscribeForm from './SubscribeForm';
 
 type Props = {
     posts: Post[];
+
 };
 
 function BlogList({ posts }: Props) {
@@ -23,6 +25,7 @@ function BlogList({ posts }: Props) {
                                 src={urlFor(post.mainImage).url()}
                                 alt={post.author.name}
                                 fill
+                                priority={true}
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                             </div>
@@ -58,6 +61,7 @@ function BlogList({ posts }: Props) {
                     </ClientSideRoute>
                 ))}
             </div>
+            <SubscribeForm/>
         </div>
     );   
 }

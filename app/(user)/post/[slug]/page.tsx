@@ -51,7 +51,8 @@ async function Post({ params: { slug } }: Props) {
                 email, 
                 comment,
                 _createdAt, 
-            },     
+            }
+            | order(_createdAt desc),     
         }
     `;
         
@@ -67,6 +68,7 @@ const post: Post = await client.fetch(query, { slug });
                         alt={post.author.name}
                         width={400}
                         height={400}
+                        priority={true}
                     />
                 <div className="absolute left-3 bottom-3 right-3 md:p-4 bg-[#fbf7ef] outline outline-white -outline-offset-[10px]">
                     <h1 className="p-4 text-[22px] md:p-2 md:text-[23.5px] font-light text-[#73736f] tracking-wide font-['Noto_Serif_Display']">
