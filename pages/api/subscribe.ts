@@ -27,7 +27,7 @@ export default async function subscribe(
             email
           })
         });
-        console.log('Subscribed!');
+        //console.log('Subscribed!');
         console.log('Env vars:', FORM_ID, API_KEY);
         res.status(200).json({ message: 'User successfully subscribed' });
       } catch (err) {
