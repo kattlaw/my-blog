@@ -7,16 +7,11 @@ export default async function subscribe(
 ){
     const FORM_ID = process.env.CONVERTKIT_FORM_ID;
     const API_KEY= process.env.CONVERTKIT_API_KEY;
-    //const API_URL= process.env.CONVERTKIT_API_URL;
 
-    //const url = [API_URL, `forms`, FORM_ID, `subscribe`].join('/');
-   
-    
     const headers = new Headers({
         'Content-Type': 'application/json; charset=utf-8',
     });
     const { first_name, email } = JSON.parse(req.body);
-    console.log("Env:", FORM_ID, API_KEY);
     try {
         await fetch(`https://api.convertkit.com/v3/forms/${FORM_ID}/subscribe`, {
           method: 'POST',
@@ -27,7 +22,7 @@ export default async function subscribe(
             email
           })
         });
-        //console.log('Subscribed!');
+        console.log('Subscribed!');
         res.status(200).json({ message: 'User successfully subscribed' });
       } catch (err) {
         console.log(err);
