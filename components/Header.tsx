@@ -53,14 +53,12 @@ function Header() {
                 >
                     <HiOutlineMail />
                 </a>
-                <a 
-                    href="https://bereavingoutloud.com/rss.xml"
+                <Link 
+                    href="/rss.xml"
                     className="hover:text-[#957964] text-[15px] text-[#ee802f]"
-                    rel="noreferrer"
-                    target="_blank"
                 >
                     <MdRssFeed />
-                </a>
+                </Link>
                 </div>
 
             </div>

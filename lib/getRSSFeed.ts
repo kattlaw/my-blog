@@ -5,7 +5,7 @@ import fs from 'fs';
 
 export async function getRSSFeed() {
 
-  const site_url = 'https://bereavingoutloud.com';
+  const site_url = 'localhost:3000';
     const feedOptions = {
         title: 'Bereaving Out Loud',
         description: 'Latest Blog Posts',
@@ -17,7 +17,11 @@ export async function getRSSFeed() {
     };
   const feed = new RSS(feedOptions);
 
-  const query = groq`*[_type == 'post']{...} | order(_createdAt desc)`;
+  const query = groq`*[_type == 'post']
+    {
+      slug,
+    } 
+    | order(_createdAt desc)`;
 
   const posts = await client.fetch(query);
 
@@ -30,7 +34,8 @@ export async function getRSSFeed() {
     });
   });
 
-  fs.writeFileSync('./public/rss.xml', feed.xml( {indent: true} ));
+
+ return feed;
 }
 
 

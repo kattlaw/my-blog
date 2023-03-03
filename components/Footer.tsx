@@ -31,14 +31,12 @@ function Footer() {
                         </a>
                     </li>
                    <li>
-                        <a 
-                            href="https://bereavingoutloud.com/rss.xml"
+                        <Link 
+                            href="/rss.xml"
                             className="mr-4 hover:text-[#957964] md:text-[21px] text-[#ee802f] md:mr-6"
-                            rel="noreferrer"
-                            target="_blank"
                         >
                             <MdRssFeed />
-                        </a>
+                        </Link>
                    </li>
                 </ul> 
                  
