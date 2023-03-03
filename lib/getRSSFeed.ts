@@ -5,7 +5,7 @@ import fs from 'fs';
 
 export async function getRSSFeed() {
 
-  const site_url = 'localhost:3000';
+  const site_url = 'https://bereavingoutloud.com';
     const feedOptions = {
         title: 'Bereaving Out Loud',
         description: 'Latest Blog Posts',
