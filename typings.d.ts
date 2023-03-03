@@ -7,6 +7,7 @@ type Base = {
 };
 
 interface Post extends Base {
+    [x: string]: any;
     author: Author;
     body: Block[];
     categories: Category[];
