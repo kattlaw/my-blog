@@ -4,7 +4,7 @@ export default function Head() {
       <title>Bereaving Out Loud</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <link rel="icon" href="/favicon.ico" />
-      <link rel="alternate" type="application/xml" title="RSS Feed" href="/feed.xml" />
+      <link rel="alternate" type="application/xml" title="RSS Feed" href="/rss.xml" />
     </>
   )
 }
