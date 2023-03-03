@@ -11,7 +11,7 @@ module.exports = {
   return [
     {
       source: "/rss",
-      destination: "/api/rss"
+      destination: "/rss.xml"
     }
   ]
  }
