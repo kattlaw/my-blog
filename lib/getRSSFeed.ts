@@ -30,14 +30,7 @@ export async function getRSSFeed() {
     });
   });
 
-  {/*const FIRST_LINE = `<?xml version="1.0" encoding="utf-8"?>`
-    const xml = feed.xml().replace(
-    FIRST_LINE,
-    FIRST_LINE +
-    '<?xml-stylesheet href="/rss-styles.xsl" type="text/xsl"?>',
-  )*/}
-
-  fs.writeFileSync('./public/rss.xml', feed.xml({indent: true}));
+  fs.writeFileSync('./public/rss.xml', feed.xml( {indent: true} ));
 }
 
 
