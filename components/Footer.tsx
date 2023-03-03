@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
+import { MdRssFeed } from 'react-icons/md';
 
 function Footer() {
     return (
@@ -24,12 +25,23 @@ function Footer() {
                     <li>
                         <a 
                             href="mailto:klaw@klawdev.com" 
-                            className="mr-4 hover:text-[#957964] md:mr-6 text-[16px]"
+                            className="mr-4 hover:text-[#957964] md:mr-6 md:text-[21px]"
                         >
                             <HiOutlineMail />
                         </a>
                     </li>
-                </ul>
+                   <li>
+                        <a 
+                            href="https://bereavingoutloud.com/rss.xml"
+                            className="mr-4 hover:text-[#957964] md:text-[21px] text-[#ee802f] md:mr-6"
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <MdRssFeed />
+                        </a>
+                   </li>
+                </ul> 
+                 
             </div>
                 <hr className="my-6 mx-4 border-[#b2b2b2]" />
                 <span className="block text-sm text-[#76768a] text-center -mb-2 font-['Frank_Ruhl_Libre']">© 2023

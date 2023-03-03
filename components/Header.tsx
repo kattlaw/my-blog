@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsRssFill } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
+import { MdRssFeed } from 'react-icons/md';
 
 
 
@@ -48,11 +49,20 @@ function Header() {
                 </Link>
                 <a 
                     href="mailto:klaw@klawdev.com" 
-                    className="hover:text-[#957964] text-[14px]"
+                    className="mr-2 hover:text-[#957964] text-[14px]"
                 >
                     <HiOutlineMail />
                 </a>
+                <a 
+                    href="https://bereavingoutloud.com/rss.xml"
+                    className="hover:text-[#957964] text-[15px] text-[#ee802f]"
+                    rel="noreferrer"
+                    target="_blank"
+                >
+                    <MdRssFeed />
+                </a>
                 </div>
+
             </div>
         </header>
     )
