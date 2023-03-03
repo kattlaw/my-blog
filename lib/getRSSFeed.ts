@@ -35,7 +35,7 @@ export async function getRSSFeed() {
   });
 
 
- return feed;
+ return feed.xml;
 }
 
 
