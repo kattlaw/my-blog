@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getRSSFeed } from '../../lib/getRSSFeed';
 
-export default async function rssHandler(
+{/*export default async function rssHandler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
@@ -21,5 +21,11 @@ export default async function rssHandler(
     console.error(error);
     res.status(500).end("Internal Server Error");
   }
+};*/}
+
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "application/rss+xml");
+  res.end((await getRSSFeed()).xml())
 };
 
