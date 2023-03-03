@@ -53,12 +53,12 @@ function Header() {
                 >
                     <HiOutlineMail />
                 </a>
-                <Link 
+                {/*<Link 
                     href="/rss.xml"
                     className="hover:text-[#957964] text-[15px] text-[#ee802f]"
                 >
                     <MdRssFeed />
-                </Link>
+    </Link>*/}
                 </div>
 
             </div>

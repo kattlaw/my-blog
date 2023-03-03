@@ -30,14 +30,14 @@ function Footer() {
                             <HiOutlineMail />
                         </a>
                     </li>
-                   <li>
+                  {/*} <li>
                         <Link 
                             href="/rss.xml"
                             className="mr-4 hover:text-[#957964] md:text-[21px] text-[#ee802f] md:mr-6"
                         >
                             <MdRssFeed />
                         </Link>
-                   </li>
+    </li>*/}
                 </ul> 
                  
             </div>
