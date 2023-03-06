@@ -32,3 +32,4 @@
    - Sanity preview in studio to see changes in real-time
    - Comment engine so users have ability to post comments on specific blog posts
    - Comments submitted are previewed in Sanity Studio for approval by admin before posted
+   - RSS Feed
