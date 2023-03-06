@@ -7,4 +7,11 @@ module.exports = {
   images: {
    domains: ["cdn.sanity.io"],
   },
+  rewrites: async () => [
+    {
+      source: '/rss.xml',
+      destination: '/api/rss',
+    },
+  ],
+
 };
