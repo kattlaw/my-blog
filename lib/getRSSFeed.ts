@@ -39,9 +39,9 @@ export async function getRSSFeed() {
    
   });
 
-  feed.xml({ indent: true });
+  return feed.xml({indent:true});
   
-  return feed;
+
 }
 
 
