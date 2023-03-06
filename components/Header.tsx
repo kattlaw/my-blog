@@ -55,7 +55,7 @@ function Header() {
                 </a>
                 <Link 
                     href="/rss.xml"
-                    className="hover:text-[#957964] text-[15px] text-[#ee802f]"
+                    className="hover:text-[#957964] text-[15px]"
                 >
                     <MdRssFeed />
                 </Link>

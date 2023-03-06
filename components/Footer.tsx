@@ -33,7 +33,7 @@ function Footer() {
                     <li>
                         <Link 
                             href="/rss.xml"
-                            className="mr-4 hover:text-[#957964] md:text-[21px] text-[#ee802f] md:mr-6"
+                            className="mr-4 hover:text-[#957964] md:text-[21px] md:mr-6"
                         >
                             <MdRssFeed />
                         </Link>
