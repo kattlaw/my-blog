@@ -1,17 +1,18 @@
 import { groq } from 'next-sanity';
 import RSS from 'rss';
 import Post from '../app/(user)/post/[slug]/page';
-import { client } from '../lib/sanity.client';
+import { client } from './sanity.client';
+import fs from 'fs';
 
 export async function getRSSFeed() {
 
-  const site_url = 'localhost:3000';
+  const site_url = 'https://bereavingoutloud.com';
     const feedOptions = {
         title: 'Bereaving Out Loud',
         description: 'Latest Blog Posts',
         generator: 'RSS Feed',
-        site_url: site_url,
-        feed_url: `localhost:3000/rss.xml`,
+        site_url: 'https://bereavingoutloud.com',
+        feed_url: 'https://bereavingoutloud.com/rss.xml',
         pubDate: new Date(),
         copyright: `All Rights reserved ${new Date().getFullYear()}, Katherine Law`,
     };
@@ -35,8 +36,11 @@ export async function getRSSFeed() {
       description: post.description,
       date: post._createdAt,
     });
+   
   });
 
+  fs.writeFileSync('./public/rss.xml', feed.xml({ indent: true }));
+  
   return feed;
 }
 
