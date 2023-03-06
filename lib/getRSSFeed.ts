@@ -39,7 +39,7 @@ export async function getRSSFeed() {
    
   });
 
-  //fs.writeFileSync('./public/rss.xml', feed.xml({ indent: true }));
+  feed.xml({ indent: true });
   
   return feed;
 }
